@@ -40,15 +40,16 @@ public class MainActivity extends AppCompatActivity {
         String packageName = "com.android.chrome";
         CustomTabsClient.bindCustomTabsService(this, packageName, mConnection);
     }
+//    INI TIDAK USAH
+//    public void prefetchContent(View view) {
+//        if (mCustomTabsClient != null) {
+//            mCustomTabsClient.warmup(0);
+//            CustomTabsSession customTabsSession = getSession();
+//            customTabsSession.mayLaunchUrl(Uri.parse(url), null, null);
+//        }
+//    }
 
-    public void prefetchContent(View view) {
-        if (mCustomTabsClient != null) {
-            mCustomTabsClient.warmup(0);
-            CustomTabsSession customTabsSession = getSession();
-            customTabsSession.mayLaunchUrl(Uri.parse(url), null, null);
-        }
-    }
-
+    // TODO KEDUA
     private CustomTabsSession getSession() {
         return mCustomTabsClient.newSession(new CustomTabsCallback() {
             @Override
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // TODO PERTAMA
     public void loadCustomTabs(View view) {
         CustomTabsIntent.Builder mBuilder = new CustomTabsIntent.Builder(getSession());
         mBuilder.setToolbarColor(ContextCompat.getColor(this, R.color.indigo_500));
@@ -72,11 +74,13 @@ public class MainActivity extends AppCompatActivity {
         mIntent.launchUrl(this, Uri.parse(url));
     }
 
+    // TODO KETIGA
     private PendingIntent addActionButton() {
         Intent playStoreIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/books/details/Ustaz_Syarif_Hidayat_MENJEMPUT_MAUT_BERSAMA_RASULU?id=s4yyDAAAQBAJ"));
         return PendingIntent.getActivity(this, 0, playStoreIntent, 0);
     }
 
+    //TODO KEEMPAT
     private PendingIntent setMenuItem() {
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
