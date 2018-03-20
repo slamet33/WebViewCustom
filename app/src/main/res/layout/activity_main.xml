@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.idn.webviewcustom.MainActivity"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:orientation="vertical">
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prefetch Content"
+        android:textAllCaps="false"
+        android:onClick="prefetchContent"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open In Chrome Custom Tabs"
+        android:textAllCaps="false"
+        android:onClick="loadCustomTabs"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open In Chrome"
+        android:textAllCaps="false"
+        android:onClick="loadInChrome"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open In WebView"
+        android:textAllCaps="false"
+        android:onClick="loadInWebView"/>
+    
+</LinearLayout>
